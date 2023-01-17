@@ -32,7 +32,7 @@ export default class Driver {
         var yearString = year?.toString() || "2022"
         var roundString = round?.toString() || "22"
 
-        xmlHttp.open( "GET", "http://localhost:3333/standings" + yearString + "-" + roundString, false ); // false for synchronous request
+        xmlHttp.open( "GET", "http://3.252.163.138:3333/standings" + yearString + "-" + roundString, false ); // false for synchronous request
         xmlHttp.send( null );
 
         const obj = JSON.parse(xmlHttp.responseText);
