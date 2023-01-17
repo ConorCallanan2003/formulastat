@@ -263,6 +263,8 @@ func CheckRoundExists(season int, round int) bool {
 			tablename  = '` + strconv.FormatInt(int64(season), 10) + `-` + strconv.FormatInt(int64(round), 10) + `'
 		);`
 	rows, errr := db.Query(insertStmt)
+	
+	CheckError(errr)
 
 	var res string
 
@@ -276,8 +278,6 @@ func CheckRoundExists(season int, round int) bool {
 			result = false
 		}
 	}
-
-	CheckError(errr)
 
 	return result
 }
