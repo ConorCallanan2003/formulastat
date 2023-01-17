@@ -60,12 +60,12 @@ func generateSqlData() {
 		resp, err := http.Get("http://ergast.com/api/f1/" + strconv.FormatInt(int64(i), 10) + "/driverStandings.json?limit=100")
 
 		if err != nil {
-			log.Panic(err)
+			log.Print(err)
 		}
 
 		body, err := io.ReadAll(resp.Body)
 		if err != nil {
-			log.Panic(err)
+			log.Print(err)
 		}
 
 		var response Response
@@ -74,7 +74,7 @@ func generateSqlData() {
 		numOfRounds, err := strconv.Atoi(response.MRData.StandingsTable.StandingsLists[0].Round)
 
 		if err != nil {
-			log.Panic(err)
+			log.Print(err)
 		}
 
 		if !CheckRoundExists(i, numOfRounds) {
@@ -93,12 +93,12 @@ func generateSqlData() {
 				resp, err := http.Get("http://ergast.com/api/f1/" + strconv.FormatInt(int64(i), 10) + roundWSlash + "/driverStandings.json?limit=100")
 
 				if err != nil {
-					log.Panic(err)
+					log.Print(err)
 				}
 
 				body, err := io.ReadAll(resp.Body)
 				if err != nil {
-					log.Panic(err)
+					log.Print(err)
 				}
 
 				var response Response
