@@ -161,11 +161,11 @@ func mapToJSON(drivers []DriverStanding) []byte {
 // }
 
 const (
-	host     = "db"
-	port     = 5433
-	user     = "user"
-	password = "password"
-	dbname   = "cars"
+	host     = "formulastat-db-1.caixidz0frkt.eu-west-1.rds.amazonaws.com"
+	port     = 5432
+	user     = "postgres"
+	password = "finxu8-hyTkub-rowqew"
+	dbname   = "postgres"
 )
 
 func addSeasonToDB(standingsTable StandingsTable, totalRounds int) {
