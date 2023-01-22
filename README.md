@@ -1,6 +1,6 @@
 # formulastat
 
-### This is a webapp built using GoLang and Vue.js for looking through historical F1 statistics.
+## This is a webapp built using GoLang and Vue.js for looking through historical F1 statistics.
 
 The backend (written in Go) periodically calls an API with historical F1 data to fill the SQL database that stores the data. This has to be done as the API (http://ergast.com/mrd/) only allows for up to 200 requests per hour.
 
